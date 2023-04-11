@@ -86,18 +86,19 @@
                     <div class="row">
                         <div class="col-xs-12 text-center menu-1">
                             <ul>
-                                <li><a href="index-2.html">Home</a></li>
+                                <li><a href="{% url 'home' %}">Home</a></li>
                                 <li class="has-dropdown">
-                                    <a href="services.html">Services</a>
+                                    <a href="{% url 'services' %}">Services</a>
                                     <ul class="dropdown">
-                                        <li><a href="#">Web Design</a></li>
-                                        <li><a href="#">Development</a></li>
-                                        <li><a href="#">Marketing</a></li>
+                                        <li><a href="{% url 'services' %}">Web Design</a></li>
+                                        <li><a href="{% url 'services' %}">Development</a></li>
+
+                                        <li><a href="{% url 'services' %}">Marketing</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="portfolio.html">Portfolio</a></li>
-                                <li class="active"><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{% url 'portfolio:project' %}">Portfolio</a></li>
+                                <li class="active"><a href="{% url 'blog:blog' %}">Blog</a></li>
+                                <li><a href="{% url 'contact:contact' %}">Contact</a></li>
                             </ul>
                         </div>
                     </div>

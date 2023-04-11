@@ -19,17 +19,17 @@ from django.urls import path, include
 from django.conf.urls.static import static
 
 from config import settings
-from config.views import home, services, contact
+from config.views import home, services
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', home, name='home'),
     path('services/', services, name='services'),
-    path('contact/', contact, name='contact'),
 
     path('blog/', include('blog.urls')),
     path('projects/', include('portfolio.urls')),
+    path('contact/', include('contact.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
