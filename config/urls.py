@@ -19,15 +19,17 @@ from django.urls import path, include
 from django.conf.urls.static import static
 
 from config import settings
-from config.views import home
+from config.views import home, services
+
 app_name='home'
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', home, name='home'),
-    path('services/', home, name='services'),
+    path('services/', services, name='services'),
     path('contact/', home, name='contact'),
 
+    path('blog/', include('blog.urls')),
     path('projects/', include('portfolio.urls')),
 ]
 if settings.DEBUG:
