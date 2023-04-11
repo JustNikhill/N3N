@@ -133,7 +133,7 @@
                                 </figure>
                                 <div class="gtco-text text-left">
                                     <h2>{{ article.title }}</h2>
-                                    <p>{{ article.text }}</p>
+                                    <p>{{ article.text|truncatechars:20 }}</p>
                                     <p class="gtco-category">{{ article.published }}, {{ article.writer }}</p>
                                 </div>
                             </a>
