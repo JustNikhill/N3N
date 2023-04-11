@@ -1,0 +1,9 @@
+.header-text {
+    margin-top: 11em;
+}
+
+@media screen and (max-width: 768px) {
+    .header-text {
+        margin-top: 7em;
+    }
+}
